@@ -1,3 +1,3 @@
-S
-N
-S
+Case 1: Mile 40
+Case 2: Juice 45
+Case 3: Mile Juice 60
