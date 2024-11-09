@@ -6,8 +6,7 @@ class priority_queue:
 		if(l):
 			self.pq=l
 			heapq.heapify(self.pq)
-		
-	def insert(self,element):
+	def push(self,element):
 		heapq.heappush(self.pq,element)
 	def pop(self):
 		return heapq.heappop(self.pq)
