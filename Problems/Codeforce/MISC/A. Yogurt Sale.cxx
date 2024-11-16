@@ -10,8 +10,8 @@ int solve(int n,int p,int pr){
 int main(int argc, char *argv[])
 {
  int t,n,p,pr;
- for (int i=0;i<)
- cin>>t;
+ for (int i=0;;i<n){
+ cin>>t;}
  while(t--){
  cin>>n>>p>>pr;
  cout<<solve(n,p,pr)<<"\n";	
