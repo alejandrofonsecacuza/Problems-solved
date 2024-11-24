@@ -1,19 +1,28 @@
 l=[1,2,33,43,53,62,71]
 
+def binary_search(arr, x):
+	low = 0
+	high = len(arr) - 1
+	mid = 0
 
-def binary_search(arr,elem):
-	"""O(log<2><len(arr)>)"""
-	r=0
-	l=len(arr)-1
-	while(r<l and abs(r-l)!=1):
-		m=(l+r)//2
-		if(arr[m]<elem):
-			r=m
-		elif(arr[m]>elem):
-			l=m
+	while low <= high:
+
+		mid = (high + low) // 2
+
+		# If x is greater, ignore left half
+		if arr[mid] < x:
+			low = mid + 1
+
+		# If x is smaller, ignore right half
+		elif arr[mid] > x:
+			high = mid - 1
+
+		# means x is present at mid
 		else:
-			return m
-	return -1
+			return mid
+
+	# If we reach here, then the element was not present
+
 import bisect
 
 def lower_bound(arr, x):

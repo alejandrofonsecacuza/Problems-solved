@@ -1,7 +1,8 @@
 from itertools import *
 #from math import factorial
-
+"""O(n)"""
 def factorial(n):
+	
     if n < 0:
         raise ValueError("El factorial no está definido para números negativos")
     resultado = 1
@@ -10,9 +11,9 @@ def factorial(n):
     return resultado
 
 
+#If k=n is a permutation else variation
 def count_permutation(n, k):
     return factorial(n) // factorial(n - k)
-   	
 def count_combinations(n,k):
 	return factorial(n) // (factorial(k)*factorial(n - k))
 
@@ -35,12 +36,14 @@ combinations(l,k)
 """
 A sequence a is a subsequence of a sequence b if a can be obtained from b by the deletion of several (possibly, zero or all) elements.
 """
-l=[]
+l=[1,2,3,4,5]
+
 def subsequence(l):
 	response=[]
 	for i in range(1,len(l)+1):
 		response+=list(combinations(l,i))
 	return response
-for i in subsequence(l):
-	print(i)
+if __name__=="__main__":
+	for i in subsequence(l):
+		print(i)
 		
