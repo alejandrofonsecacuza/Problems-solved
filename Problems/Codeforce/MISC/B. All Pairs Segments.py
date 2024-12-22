@@ -22,7 +22,6 @@ def solve():
 			count_p[count*(n-count)]+=abs(i-aux)-1
 		count+=1
 		aux=i
-
 	#print(count_p)
 	response=[]
 	for q in k:
