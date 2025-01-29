@@ -1,0 +1,1 @@
+This problems solution are programing in python and its status are TLE becouse de recursion is timeout. So  first traslate these code to c++  and submit later.
