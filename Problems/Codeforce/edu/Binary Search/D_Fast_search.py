@@ -1,27 +1,7 @@
-l=[1,2,33,43,53,62,71]
-
-def binary_search(arr, x):
-	low = 0
-	high = len(arr) - 1
-	mid = 0
-
-	while low <= high:
-
-		mid = (high + low) // 2
-
-		# If x is greater, ignore left half
-		if arr[mid] < x:
-			low = mid + 1
-
-		# If x is smaller, ignore right half
-		elif arr[mid] > x:
-			high = mid - 1
-
-		# means x is present at mid
-		else:
-			return mid
-	return -1
-	# If we reach here, then the element was not present
+def cinint():
+    return int(input())
+def cinline():
+    return list(map(int,input().split()))
 
 import bisect
 
@@ -48,3 +28,20 @@ def find_min_not_less(arr, x):
     return index if index < len(arr) else len(arr)
 
 			
+
+def solve():
+    n=cinint()
+    a=cinline()
+    q=cinint()
+    a.sort()
+    result=[]
+    for _ in range(q):
+        l,r = cinline()
+        ind1=find_min_not_less(a,l)
+        ind2=find_max_not_greater(a,r)
+        result.append(ind2-ind1+1)
+    return result
+t=1
+#t=cinint()
+for _ in range(t):
+    print(*solve())
